@@ -83,7 +83,6 @@ def delete_budget(name):
     if get_budget(name) == None:
         return
 
-    print("Delete "+AccountId+' '+name)
     return AwsSdkCall(
         service="Budgets",
         action="deleteBudget",
@@ -98,13 +97,12 @@ def upsert_budget(name, email, amount, unit='PERCENTAGE', method='EMAIL'):
         print('Create budget '+name)
         return create_budget(name, email, amount, unit, method)
     else:
-        print('Replace budget '+name)
+        #print('Replace budget '+name)
         delete_budget_api(name)
         return create_budget(name, email, amount, unit, method)
 
 
 def get_budget(name):
-    print('get budget '+name)
     try:
         response = client.describe_budget(
             AccountId=AccountId,
