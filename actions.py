@@ -24,7 +24,6 @@ def focm():
 
 
 def create_budget(name, email, amount, unit='PERCENTAGE', method='EMAIL'):
-    print("Create "+name+' '+email)
     return AwsSdkCall(
         service="Budgets",
         action="createBudget",
@@ -94,10 +93,8 @@ def delete_budget(name):
 
 def upsert_budget(name, email, amount, unit='PERCENTAGE', method='EMAIL'):
     if get_budget(name) == None:
-        print('Create budget '+name)
         return create_budget(name, email, amount, unit, method)
     else:
-        #print('Replace budget '+name)
         delete_budget_api(name)
         return create_budget(name, email, amount, unit, method)
 

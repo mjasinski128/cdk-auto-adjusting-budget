@@ -13,7 +13,8 @@ class MyStack(Stack):
 
         amount = CfnParameter(self,
                               "amount",
-                              type='Number'
+                              type='Number',
+                              default=110
                               )
 
         email = CfnParameter(
