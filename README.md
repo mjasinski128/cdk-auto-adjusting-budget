@@ -22,7 +22,7 @@ Cloud Formation (CFN) resource for it is expected in future but is not yet suppo
 
 Deploy to single AWS account with AWS CLI
 
-* `make deploy-budget EMAIL_ADDRESS=SOME_EMAIL_ADDRESS` - deploy resources using CDK
+* `make deploy-budget EMAIL_ADDRESS=SOME_EMAIL_ADDRESS AUTO_BUDGET_AMOUNT=SOME_PERCENTAGE` - deploy resources using CDK (AUTO_BUDGET_AMOUNT = 110 for 110% trigger)
 * `make remove-budget` - remove budget with all created resources
 
 
