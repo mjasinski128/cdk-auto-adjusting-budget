@@ -20,7 +20,7 @@ Cloud Formation (CFN) resource for it is expected in future but is not yet suppo
 
 * `make install` - install python libraries and activates virtual environment
 
-Deploy to single AWS account with AWS CLI
+Deploy to single AWS account
 
 * `make deploy-budget EMAIL_ADDRESS=SOME_EMAIL_ADDRESS AUTO_BUDGET_AMOUNT=SOME_PERCENTAGE` - deploy resources using CDK (`AUTO_BUDGET_AMOUNT=110` for `110%` trigger)
 * `make remove-budget` - remove budget with all created resources
